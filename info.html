@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>A propos</title>
+</head>
+
+<body>
+    <header class="header-fixed">
+
+        <div class="header-limiter">
+
+            <h1><a href="#">Be<span>lib'</span></a></h1>
+
+            <nav>
+                <a href="index.html" >Accueil</a>
+                <a href="datastation.html">Data station</a>
+                <a href="info.html"class="selected">A propos</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div class="header-fixed-placeholder"></div>
+    <a id="back" href="index.html">← Retour</a>
+    <h1>Un site de Data visualisation</h1>
+
+    <main>
+        <h2>Pourquoi ce site ?</h2>
+        Le but de ce site est de visualiser le nombre de station de recharge à Paris depuis 2019 jusqu'à déembre 2022.
+        La visualisation est simple :
+        <ul>
+            <li>
+                les stations sont affichées sur un carte selon leurs emplacement,
+            </li>
+            <br>
+            <li>lors d'un clic sur une station ses informations sont affichées grace à une pop-up.</li>
+        </ul>
+        <br>
+        <h2>Qui suis-je ?</h2>
+        Je suis Corentin Macret ,étudiant en BUT MMI à Champs-sur-Marne.
+        Dans le cadre d'un projet étudiant , J'ai créer ce site de Data visualisation.
+        <br>
+        En savoir plus sur le BUT MMI : <a href="http://www.dut-mmi-champs.fr/">La formation MMI</a>
+        <br>
+        <h2>Mentions légales</h2>
+        <ul class="infos">
+            <li>Hébergeur : o2switch.</li>
+            <li>Développement, Design et rédaction: Corentin Macret</li>
+            <br>
+            <li>Source de la map: <a href="https://leafletjs.com/examples/choropleth/"> Leaflet</a></li>
+            <li>Source d'informations de Data : <a href="https://opendata.paris.fr">OpenData.paris.fr</a></li>
+        </ul>
+        <img class="iut" src="/img/logoiut.jpg" alt="logo iut champs sur marne">
+    </main>
+
+</body>
+
+<style>
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: rgb(123, 128, 129);
+    }
+
+    h1 {
+        text-align: center;
+
+        font-size: 2.9rem;
+        margin: 0;
+    }
+
+    .iut {
+        position: absolute;
+        right: 12%;
+        bottom: 20%;
+    }
+
+    @media screen and (max-width: 1650px) {
+        .iut {
+            position: relative;
+            right: 2%;
+            bottom: 5%;
+
+        }
+    }
+
+    
+
+    #back {
+        position: fixed;
+        top: 2%;
+        left: 2%;
+        text-decoration: none;
+        color: #e0d5d5;
+        font-weight: 800;
+    }
+
+    #back:hover {
+        text-decoration: underline;
+        font-size: larger;
+    }
+
+    a:hover {
+        font-weight: 900;
+    }
+
+    main {
+        position: relative;
+        background-color: #9bc1dba4;
+        border-radius: 10%;
+
+        padding: 2% 5%;
+
+    }
+
+    .infos {
+        list-style-type: none;
+    }
+</style>
+
+</html>

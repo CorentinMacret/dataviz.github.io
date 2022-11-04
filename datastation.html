@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Station par arrondissement </title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header class="header-fixed">
+
+        <div class="header-limiter">
+
+            <h1><a href="#">Be<span>lib'</span></a></h1>
+
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="datastation.html" class="selected">Data station</a>
+                <a href="info.html">A propos</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <svg class="graph" width="1000" height="600"></svg>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script/chart.js"></script>
+
+    <p class="description">Visualition du nombre de station par arrondissement de Paris de Aout 2019 à Décembre 2022</p>
+
+</body>
+
+</html>
+<style>
+    body {
+        background-color: rgb(183, 191, 192);
+    }
+
+    .highlight {
+            fill: rgb(255, 81, 0);
+        }
+
+
+
+
+    .bar {
+        fill: rgb(28, 87, 134);
+    }
+
+    .bar:hover {
+        fill: orangered;
+    }
+</style>
