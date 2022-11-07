@@ -200,4 +200,4 @@ dateSlider.noUiSlider.on("update", function (values, handle) {
 // => https://opendata.paris.fr/explore/dataset/arrondissements/
 // => https://opendata.paris.fr/explore/dataset/belib-points-de-recharge-pour-vehicules-electriques-donnees-statiques/
 
-
+// => exemple de code pour les pop-up sur les markers : https://stackoverflow.com/questions/26048397/leaflet-popup-with-dynamic-content-not-centered-over-marker
