@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>visualisation dynamique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style/style.css">
+
+  <!-- chargerle c3.css  et le bootstrap-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- d3.js et c3.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+  <header class="header-fixed">
+
+    <div class="header-limiter">
+
+      <h2><a href="https://belib.paris/home" alt="vers le site belib">Be<span>lib'</span></a></h2>
+
+      <nav role="navigation">
+        <a href="accueil.html">Accueil</a>
+        <a href="datastation.html" class="selected" aria-label="Page graphique du nombre de station"
+          aria-current="page">Data station</a>
+        <a href="info.html">A propos</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <h2>Visualisations du nombre de stations mise en service par jour.</h2>
+      <h5>Passez la souris sur un "point" pour voir le jour et le nombre de stations mise en service </h5>
+    </div>
+    <div style = "width: 160%; height: 40em; line-height: 9em; overflow:scroll; border: thin #000 solid; padding: 5px; background-color: rgb(216, 230, 230);">
+    
+      <div class="row " style="width:500% ;">
+        <div id="chart" style="height:33em ;"></div>
+
+      </div>
+    </div>
+    
+  </div>
+
+
+  <script type="text/javascript">
+    var chart = c3.generate({
+      bindto: '#chart',
+      data: {
+        x: 'date',
+        xFormat: '%Y-%m-%d',
+        json: [{
+          "date": "2021-03-01",
+          "value": 1
+        },
+        {
+          "date": "2021-03-15",
+          "value": 193
+        },
+        {
+          "date": "2021-03-26",
+          "value": 3
+        },
+        {
+          "date": "2021-04-01",
+          "value": 6
+        },
+        {
+          "date": "2021-04-07",
+          "value": 3
+        },
+        {
+          "date": "2021-04-14",
+          "value": 15
+        },
+        {
+          "date": "2021-04-23",
+          "value": 3
+        },
+        {
+          "date": "2021-05-05",
+          "value": 3
+        },
+        {
+          "date": "2021-05-12",
+          "value": 23
+        },
+        {
+          "date": "2021-05-19",
+          "value": 18
+        },
+        {
+          "date": "2021-05-21",
+          "value": 4
+        },
+        {
+          "date": "2021-05-28",
+          "value": 11
+        },
+        {
+          "date": "2021-06-01",
+          "value": 3
+        },
+        {
+          "date": "2021-06-03",
+          "value": 14
+        },
+        {
+          "date": "2021-06-04",
+          "value": 14
+        },
+        {
+          "date": "2021-06-10",
+          "value": 25
+        },
+        {
+          "date": "2021-06-11",
+          "value": 5
+        },
+        {
+          "date": "2021-06-17",
+          "value": 28
+        },
+        {
+          "date": "2021-06-18",
+          "value": 13
+        },
+        {
+          "date": "2021-06-23",
+          "value": 15
+        },
+        {
+          "date": "2021-06-24",
+          "value": 29
+        },
+        {
+          "date": "2021-06-25",
+          "value": 11
+        },
+        {
+          "date": "2021-06-30",
+          "value": 40
+        },
+        {
+          "date": "2021-07-01",
+          "value": 32
+        },
+        {
+          "date": "2021-07-07",
+          "value": 38
+        },
+        {
+          "date": "2021-07-08",
+          "value": 11
+        },
+        {
+          "date": "2021-07-09",
+          "value": 22
+        },
+        {
+          "date": "2021-07-12",
+          "value": 26
+        },
+        {
+          "date": "2021-07-13",
+          "value": 70
+        },
+        {
+          "date": "2021-07-21",
+          "value": 24
+        },
+        {
+          "date": "2021-07-22",
+          "value": 45
+        },
+        {
+          "date": "2021-07-27",
+          "value": 6
+        },
+        {
+          "date": "2021-08-05",
+          "value": 14
+        },
+        {
+          "date": "2021-08-11",
+          "value": 47
+        },
+        {
+          "date": "2021-08-17",
+          "value": 67
+        },
+        {
+          "date": "2021-08-25",
+          "value": 17
+        },
+        {
+          "date": "2021-08-26",
+          "value": 45
+        },
+        {
+          "date": "2021-08-27",
+          "value": 5
+        },
+        {
+          "date": "2021-09-01",
+          "value": 46
+        },
+        {
+          "date": "2021-09-06",
+          "value": 6
+        },
+        {
+          "date": "2021-09-07",
+          "value": 53
+        },
+        {
+          "date": "2021-09-14",
+          "value": 87
+        },
+        {
+          "date": "2021-09-21",
+          "value": 56
+        },
+        {
+          "date": "2021-09-29",
+          "value": 56
+        },
+        {
+          "date": "2021-10-01",
+          "value": 3
+        },
+        {
+          "date": "2021-10-06",
+          "value": 11
+        },
+        {
+          "date": "2021-10-12",
+          "value": 51
+        },
+        {
+          "date": "2021-10-19",
+          "value": 73
+        },
+        {
+          "date": "2021-10-22",
+          "value": 1
+        },
+        {
+          "date": "2021-10-26",
+          "value": 75
+        },
+        {
+          "date": "2021-10-27",
+          "value": 1
+        },
+        {
+          "date": "2021-10-29",
+          "value": 6
+        },
+        {
+          "date": "2021-11-03",
+          "value": 71
+        },
+        {
+          "date": "2021-11-09",
+          "value": 53
+        },
+        {
+          "date": "2021-11-15",
+          "value": 1
+        },
+        {
+          "date": "2021-11-16",
+          "value": 62
+        },
+        {
+          "date": "2021-11-23",
+          "value": 73
+        },
+        {
+          "date": "2021-11-25",
+          "value": 17
+        },
+        {
+          "date": "2021-12-01",
+          "value": 62
+        },
+        {
+          "date": "2021-12-08",
+          "value": 28
+        },
+        {
+          "date": "2021-12-13",
+          "value": 3
+        },
+        {
+          "date": "2021-12-14",
+          "value": 25
+        },
+        {
+          "date": "2021-12-22",
+          "value": 3
+        },
+        {
+          "date": "2022-01-10",
+          "value": 3
+        },
+        {
+          "date": "2022-01-13",
+          "value": 5
+        },
+        {
+          "date": "2022-01-21",
+          "value": 7
+        },
+        {
+          "date": "2022-01-27",
+          "value": 6
+        },
+        {
+          "date": "2022-02-03",
+          "value": 4
+        },
+        {
+          "date": "2022-02-04",
+          "value": 7
+        },
+        {
+          "date": "2022-02-10",
+          "value": 5
+        },
+        {
+          "date": "2022-03-07",
+          "value": 6
+        },
+        {
+          "date": "2022-04-22",
+          "value": 6
+        },
+        {
+          "date": "2022-05-17",
+          "value": 15
+        },
+        {
+          "date": "2022-06-15",
+          "value": 3
+        },
+        {
+          "date": "2022-06-17",
+          "value": 6
+        },
+        {
+          "date": "2022-06-27",
+          "value": 2
+        },
+        {
+          "date": "2022-06-30",
+          "value": 4
+        },
+        {
+          "date": "2022-07-13",
+          "value": 6
+        },
+        {
+          "date": "2022-07-29",
+          "value": 4
+        },
+        {
+          "date": "2022-08-01",
+          "value": 1
+        },
+        {
+          "date": "2022-08-08",
+          "value": 2
+        },
+        {
+          "date": "2022-08-10",
+          "value": 4
+        },
+        {
+          "date": "2022-08-19",
+          "value": 11
+        },
+        {
+          "date": "2022-10-06",
+          "value": 3
+        },
+        {
+          "date": "2022-10-19",
+          "value": 15
+        },
+        {
+          "date": "2022-10-21",
+          "value": 2
+        },
+        {
+          "date": "2022-10-24",
+          "value": 6
+        },
+        {
+          "date": "2022-10-25",
+          "value": 8
+        },
+        {
+          "date": "2022-10-26",
+          "value": 1
+        },
+        {
+          "date": "2022-10-27",
+          "value": 1
+        },
+        {
+          "date": "2022-10-28",
+          "value": 3
+        },
+        {
+          "date": "2022-10-31",
+          "value": 4
+        },
+        {
+          "date": "2022-11-02",
+          "value": 2
+        },
+        {
+          "date": "2022-11-04",
+          "value": 1
+        }
+        ],
+        keys: {
+          x: 'date',
+          value: ['value']
+        }
+      },
+      axis: {
+        x: {
+          type: 'timeseries',
+          tick: {
+            format: '%d/%m/%Y'
+          }
+        }
+      },
+      grid: {
+        x: {
+          show: true
+        },
+        y: {
+          show: true
+        }
+      }
+    });
+  </script>
+  <br>
+  <h2 style="margin-left:2% ;">Déplacer la barre de défilement vers la droite pour visualiser la suite du graphique</h2>
+  <img src="/img/fleche.png" alt="">
+
+</body>
+
+</html>
+
+<style>
+  body{
+    background-color:#a0c9f157;
+  }
+  .container {
+    margin-left: 1%;
+  }
+</style>

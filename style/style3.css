@@ -1,0 +1,78 @@
+@charset "UTF-8";
+a {
+  color: white;
+}
+
+a:hover {
+  color: #cdcdcd;
+}
+
+.description {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  text-align: center;
+  color: #BCBCBC;
+  background-color: #3C4247;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.graph g.axis text {
+  fill: #BCBCBC;
+  font-size: 0.9em;
+}
+.graph .domain, .graph .axis line {
+  stroke: #BCBCBC;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+.bar {
+  fill: rgba(0, 0, 0, 0);
+}
+
+.area {
+  fill: #568056;
+}
+
+.bar:hover {
+  fill: #87A187;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: #343434;
+  color: #BCBCBC;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 13px;
+  width: 100%;
+  line-height: 0.5;
+  color: #343434;
+  content: "▼";
+  position: absolute;
+  text-align: center;
+}
+
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
