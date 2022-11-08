@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     /* background-color: #0e0e0e; */
-    background-image: url(img/data.gif);
+    background-image: url(/img/data.gif);
     background-size: cover;
     display: flex;
     flex-direction: column;
