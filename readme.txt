@@ -1,4 +1,4 @@
-L’objectif de ce projet étati de "créer une page web qui permet de visualiser des
+L’objectif de ce projet était de "créer une page web qui permet de visualiser des
 données à propos d’un phénomène qui évolue, pour décrire cette évolution aux
 internautes de façon claire, attractive et percutante."
 
